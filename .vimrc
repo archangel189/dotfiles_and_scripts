@@ -3,8 +3,6 @@
 " * http://vim.wikia.com/wiki/Vim_on_Freenode
 " * Arthur Rimbun <arthur.rimbun@gmail.com>
 
-execute pathogen#infect()
- 
 "------------------------------------------------------------
 " Features {{{1
 "
@@ -142,6 +140,13 @@ set expandtab
 "set shiftwidth=4
 set tabstop=4
 
+" Enable Pathogen plugin
+execute pathogen#infect()
+
+" Enable FZF plugin
+set rtp+=~/.fzf
+
 autocmd VimEnter * NERDTree | wincmd p
 
 map <C-o> :NERDTreeToggle<CR>
+map ; :FZF<CR>
