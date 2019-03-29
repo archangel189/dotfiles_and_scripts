@@ -4,4 +4,4 @@ This repository contains files that relate to customisation of the VIM text edit
 
 Test [readme][url]
 
-[url]: test/README.md
+[url]: test/
