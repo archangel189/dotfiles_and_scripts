@@ -150,3 +150,8 @@ autocmd VimEnter * NERDTree | wincmd p
 
 map <C-o> :NERDTreeToggle<CR>
 map ; :FZF<CR>
+
+call plug#begin('~/.vim/plugged')
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+call plug#end()
