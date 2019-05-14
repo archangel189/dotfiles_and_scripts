@@ -1,3 +1,3 @@
-# dotfiles
+# Dotfiles and Scripts
 
-Dotfiles for archangel189
+A collection of dotfiles and useful shell scripts.
