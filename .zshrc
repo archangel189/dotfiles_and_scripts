@@ -92,4 +92,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$PATH:/usr/local/kubebuilder/bin
+alias ll='ls -la'
+alias vmm='vim ~/src/meeting-minutes.txt'
+alias vbugs='vim ~/src/bugs.md'
+alias vzshrc='vim ~/.zshrc'
+alias sou='source ~/.zshrc'
+alias h='history'
+alias k='kubectl'
+alias kc='vim ~/.kube/config'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export GOPATH=/Users/rimbunar/go
+export GOFLAGS="-mod=vendor"
+export PATH=/usr/local/opt/swagger-codegen@2/bin:/usr/local/opt/bin:$HOME/bin:$GOPATH/bin:$PATH
