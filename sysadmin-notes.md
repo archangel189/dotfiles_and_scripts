@@ -50,6 +50,8 @@ dd if=/dev/disk2 of=output.iso
 
 disown
 
+docker exec -it "container-id" bash
+
 # Remove stopped containers
 docker ps --filter "status=exited" | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
 
@@ -125,6 +127,8 @@ print -l terraform-services/**/* | grep
 
 python -mjson.tool # pretty prints json documents.
 
+quicktype --src schemas/paas/v1/appspace-v0.1.schema.json --src-lang schema --lang go --out test_output.go --package $PACKAGE
+
 route get <address>
 
 rsync -avz ~/Dropbox/ ~/OneDrive/
@@ -140,7 +144,7 @@ ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 sudo killall -HUP mDNSResponder
 
 vault kv get -field=value /path/to/secret
-vault write  /path/to/secret.txt  @value=some.file
+vault write  /path/to/secret.txt @value=some.file
 
 wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
 
