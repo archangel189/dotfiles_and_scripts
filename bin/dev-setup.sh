@@ -8,3 +8,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 # Homebrew packages
 brew install go gomplate kubectl
+
+# Go packages
+go get github.com/rogpeppe/godef
+go get github.com/zmb3/gogetdoc
