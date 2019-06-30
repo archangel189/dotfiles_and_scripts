@@ -12,3 +12,4 @@ brew install go gomplate kubectl
 # Go packages
 go get github.com/rogpeppe/godef
 go get github.com/zmb3/gogetdoc
+go get github.com/go-delve/delve/cmd/dlv    # Go debugger
