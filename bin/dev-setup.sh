@@ -10,6 +10,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 brew install go gomplate kubectl
 
 # Go packages
-go get github.com/rogpeppe/godef
-go get github.com/zmb3/gogetdoc
-go get github.com/go-delve/delve/cmd/dlv    # Go debugger
+go get -u github.com/nsf/gocode                 # completion
+go get -u github.com/zmb3/gogetdoc              # documentation
+go get -u golang.org/x/tools/cmd/goimports      # import resolution/rewriting
+go get -u github.com/golang/lint/golint         # linting
+go get -u github.com/rogpeppe/godef             # goto definition
+go get -u github.com/alecthomas/gometalinter    # metalinting
