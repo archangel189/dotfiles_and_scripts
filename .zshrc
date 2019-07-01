@@ -100,6 +100,10 @@ alias sou='source ~/.zshrc'
 alias h='history'
 alias k='kubectl'
 alias kc='vim ~/.kube/config'
+alias dk='docker'
+
+alias gpoh='git push origin HEAD'
+alias gpohf='git push origin HEAD -f'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
