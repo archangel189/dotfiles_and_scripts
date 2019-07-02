@@ -1,3 +1,7 @@
+BASH_IT_HTTP_PROXY=http://127.0.0.1:3128
+BASH_IT_HTTPS_PROXY=http://127.0.0.1:3128
+BASH_IT_NO_PROXY='localhost,127.0.0.*,10.*,192.168.*,10.96.0.0/12,192.168.99.0/24,192.168.39.0/24'
+
 proxy_print() {
     echo http_proxy=$http_proxy;
     echo https_proxy=$https_proxy;
