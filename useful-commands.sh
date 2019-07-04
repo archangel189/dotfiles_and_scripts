@@ -1,7 +1,3 @@
-# Sysadmin Notes
-
-## Useful Commands
-
 ansible-playbook -i "localhost," -c local --extra-vars "user=tom.pride" /home/ubuntu/ansible/playbooks/openvpn/create-client-access.yml
 
 aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"
@@ -69,20 +65,19 @@ docker run \
   -v "$PWD":/awspec \
   art2.auiag.corp/docker-awspec
 
-
 docker build -t art2.auiag.corp/docker-awspec .
 
-// Ensures that this task exits properly and the result of the tests
-// gets parsed in the next step.
+# Ensures that this task exits properly and the result of the tests
+# gets parsed in the next step.
 exit 0
 
 du -sh * | sort -h
 du -sh * | gsort
 
-// Add subtitle "infile.srt" to video "infile.mp4" and outputs a new MP4 file
+# Add subtitle "infile.srt" to video "infile.mp4" and outputs a new MP4 file
 ffmpeg -i infile.mp4 -i infile.srt -c copy -c:s mov_text outfile.mp4
 
-// Convert FLAC to mp3 256kbps
+# Convert FLAC to mp3 256kbps
 ffmpeg -i input.flac -ab 256k -map_metadata 0 -id3v2_version 3 output.mp3
 
 git diff master...feature/branch
@@ -112,7 +107,7 @@ mplayer -vo null -ao pcm:file=output.wav input.iso
 nc -vz 8.8.8.8 443
 
 netstat -nr -f inet
-netstat -nap “LISTEN "
+netstat -nap "LISTEN "
 
 nohup
 
@@ -135,7 +130,8 @@ rsync -avz ~/Dropbox/ ~/OneDrive/
 
 sftp -P 122 -i ~/.ssh/iag-lexer.pem iag@sftp.lexer.io:data
 
-ssh -i /Users/arthur.rimbun/.ssh/iag-ia-sandbox-jumphost.pem -o ProxyCommand="nc -X connect -x proxy.auiag.corp:8080 %h %p" ubuntu@52.64.118.74
+ssh -i /Users/arthur.rimbun/.ssh/iag-ia-sandbox-jumphost.pem -o
+ProxyCommand="nc -X connect -x proxy.some.corp:8080 %h %p" ubuntu@1.2.3.4
 ssh -L 5000:localhost:5000 -f centos@10.103.2.0 -N
 
 ssh-keygen -R jumphost3
@@ -147,40 +143,3 @@ vault kv get -field=value /path/to/secret
 vault write  /path/to/secret.txt @value=some.file
 
 wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
-
-## Misc notes
-
-/etc/environment <-- system-wide environment variables
-
-## Docker Registry — "certificate signed by unknown authority" error
-
-### Problem
-
-Authentication with IAG internal Docker registry (art2.auiag.corp) may fail when publishing your own Docker image:
-
-```
-$ docker push art2.auiag.corp/docker-serverspec:latest
-The push refers to a repository [art2.auiag.corp/docker-serverspec]
-Get https://art2.auiag.corp/v1/_ping: x509: certificate signed by unknown authority
-```
-
-### Solution
-
-On the terminal where the Docker daemon is running, execute the following command to get inside the Docker machine:
-
-`docker-machine ssh`
-
-Once inside, open `/var/lib/boot2docker/profile` and add the `--insecure-registry` flag to `EXTRA_ARGS`, as per below:
-
-```
-EXTRA_ARGS='
---label provider=virtualbox --insecure-registry art2.auiag.corp
-'
-```
-
-Restart the Docker daemon on the machine:
-
-`/etc/init.d/docker restart`
-
-You can now push your Docker image, using a slightly different command:
-`docker --tlsverify=false push art2.auiag.corp/docker-serverspec:latest`
