@@ -62,7 +62,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,6 +104,7 @@ alias h='history'
 alias k='kubectl'
 alias kc='vim ~/.kube/config'
 alias dk='docker'
+alias v='vault'
 
 alias gpoh='git push origin HEAD'
 alias gpohf='git push origin HEAD -f'
