@@ -21,3 +21,4 @@ go get -u golang.org/x/tools/cmd/goimports      # import resolution/rewriting
 go get -u github.com/golang/lint/golint         # linting
 go get -u github.com/rogpeppe/godef             # goto definition
 go get -u github.com/alecthomas/gometalinter    # metalinting
+go get -u golang.org/x/tools/cmd/gorename       # rename go identifiers
