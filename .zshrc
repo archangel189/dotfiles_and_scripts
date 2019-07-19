@@ -69,6 +69,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
 
 # User configuration
 

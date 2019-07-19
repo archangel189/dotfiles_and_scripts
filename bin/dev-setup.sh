@@ -10,7 +10,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 cp .* $HOME
 
 # Homebrew packages
-brew install go gomplate kubectl zsh zsh-autocompletions zsh-syntax-highlighting
+brew install go gomplate kubectl zsh zsh-autocompletions zsh-syntax-highlighting zsh-git-prompt
 
 # Go packages
 go get -u github.com/nsf/gocode                 # completion
