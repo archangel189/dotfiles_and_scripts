@@ -97,6 +97,13 @@ source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# --- Personal repositories ---
+
+alias gh-arimbun='cd $HOME/src/github.com/arimbun/'
+alias gh-dotfiles='cd $HOME/src/github.com/arimbun/dotfiles_and_scripts'
+
+# --- Git aliases ---
+
 alias ll='ls -la'
 alias vmm='vim ~/src/meeting-minutes.txt'
 alias vbugs='vim ~/src/bugs.md'
@@ -107,6 +114,18 @@ alias k='kubectl'
 alias kc='vim ~/.kube/config'
 alias dk='docker'
 alias v='vault'
+
+# --- TextMate --
+
+export EDITOR='mate -w'
+
+# Press 'v' when opening a file with less to edit it in TextMate
+export LESSEDIT='mate -l %lm %f'
+
+# Press 'e' when opening a TeX file to edit it in TextMate
+export TEXEDIT='mate -w -l %d "%s"'
+
+# --- Others ---
 
 alias gpoh='git push origin HEAD'
 alias gpohf='git push origin HEAD -f'
