@@ -11,6 +11,7 @@ cp .* $HOME
 
 # Homebrew packages
 brew install go gomplate kubectl zsh zsh-autocompletions zsh-syntax-highlighting zsh-git-prompt
+brew cask install clipy
 
 # Go packages
 go get -u github.com/nsf/gocode                 # completion
