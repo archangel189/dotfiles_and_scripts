@@ -105,11 +105,16 @@ source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
 alias gh-arimbun='cd $HOME/src/github.com/arimbun/'
 alias gh-dotfiles='cd $HOME/src/github.com/arimbun/dotfiles_and_scripts'
 
-# --- Git aliases ---
+# --- Aliases ---
 
-alias ll='ls -la'
 alias vmm='vim ~/src/meeting-minutes.txt'
 alias vbugs='vim ~/src/bugs.md'
+
+alias gpoh='git push origin HEAD'
+alias gpohf='git push origin HEAD -f'
+alias gbdm='git branch --merged | grep -v \* | xargs git branch -d'
+
+alias ll='ls -la'
 alias vzshrc='vim ~/.zshrc'
 alias sou='source ~/.zshrc'
 alias h='history'
@@ -127,11 +132,6 @@ export LESSEDIT='mate -l %lm %f'
 
 # Press 'e' when opening a TeX file to edit it in TextMate
 export TEXEDIT='mate -w -l %d "%s"'
-
-# --- Others ---
-
-alias gpoh='git push origin HEAD'
-alias gpohf='git push origin HEAD -f'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
