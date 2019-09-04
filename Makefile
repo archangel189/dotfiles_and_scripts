@@ -10,7 +10,7 @@ endif
 .DEFAULT_GOAL=help
 
 help: ## Print help
-	@bin/makefile/make-help.sh Makefile
+	@scripts/makefile/make-help.sh Makefile
 
 .PHONY: test
 test: ## Run tests

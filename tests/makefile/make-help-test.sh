@@ -2,7 +2,7 @@
 
 load '/usr/local/lib/bats/load.bash'
 
-SCRIPT_PATH=bin/makefile
+SCRIPT_PATH=scripts/makefile
 TEST_PATH=tests/makefile
 
 @test "make help - should print help for Makefile with one target" {
