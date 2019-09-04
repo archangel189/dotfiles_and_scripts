@@ -1,0 +1,5 @@
+deploy: ## Deploy AppSpace API
+    @echo do stuff
+
+build: ## Build AppSpace API
+    @echo do stuff
