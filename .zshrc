@@ -104,6 +104,7 @@ source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
 
 alias gh-arimbun='cd $HOME/src/github.com/arimbun/'
 alias gh-dotfiles='cd $HOME/src/github.com/arimbun/dotfiles_and_scripts'
+alias gh-invoice='cd $HOME/src/github.com/arimbun/invoice_generator'
 
 # --- Aliases ---
 
