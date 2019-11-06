@@ -116,6 +116,9 @@ ntpdc -c loopinfo
 ntpdc -c kerninfo
 ntpdate -d              # This will contact an NTP server and determine the time difference but not change your system's time.
 
+# Create self-signed certificate
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -subj '/CN=localhost' -nodes
+
 pcregrep --color='auto' -n "[\x80-\xFF]" filename.txt
 
 print -l terraform-services/**/* | grep
