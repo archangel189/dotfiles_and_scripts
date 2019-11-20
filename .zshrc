@@ -111,6 +111,7 @@ alias gh-invoice='cd $HOME/src/github.com/arimbun/invoice_generator'
 alias vmm='vim ~/src/meeting-minutes.txt'
 alias vbugs='vim ~/src/bugs.md'
 
+alias glst='git log --stat'
 alias gpoh='git push origin HEAD'
 alias gpohf='git push origin HEAD -f'
 alias gbdm='git branch --merged | grep -v \* | xargs git branch -d'
