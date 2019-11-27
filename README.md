@@ -2,6 +2,7 @@
 
 A collection of dotfiles and useful shell scripts.
 
+```
 .
 ├── .tm_properties               # Settings for TextMate (text editor)
 ├── .vimrc                       # Settings for VI
@@ -23,3 +24,4 @@ A collection of dotfiles and useful shell scripts.
 │       ├── Makefile-2
 │       └── make-help-test.sh
 └── useful-commands.sh           # List of useful commands
+```
