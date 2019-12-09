@@ -104,12 +104,9 @@ source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
 
 alias gh-arimbun='cd $HOME/src/github.com/arimbun/'
 alias gh-dotfiles='cd $HOME/src/github.com/arimbun/dotfiles_and_scripts'
-alias gh-invoice='cd $HOME/src/github.com/arimbun/invoice_generator'
+alias gh-billmonger='cd $HOME/src/github.com/arimbun/billmonger'
 
 # --- Aliases ---
-
-alias vmm='vim ~/src/meeting-minutes.txt'
-alias vbugs='vim ~/src/bugs.md'
 
 alias glst='git log --stat'
 alias gpoh='git push origin HEAD'
@@ -124,10 +121,9 @@ alias k='kubectl'
 alias kc='vim ~/.kube/config'
 alias dk='docker'
 alias v='vault'
+alias debian-version='cat /etc/issue'
 
 # --- TextMate --
-
-export EDITOR='mate -w'
 
 # Press 'v' when opening a file with less to edit it in TextMate
 export LESSEDIT='mate -l %lm %f'
