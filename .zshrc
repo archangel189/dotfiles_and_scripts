@@ -133,6 +133,6 @@ export TEXEDIT='mate -w -l %d "%s"'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export GOPATH=/Users/rimbunar/go
+export GOPATH=$HOME/go
 export GOFLAGS="-mod=vendor"
 export PATH=/usr/local/opt/swagger-codegen@2/bin:/usr/local/opt/bin:$HOME/bin:$GOPATH/bin:$PATH
