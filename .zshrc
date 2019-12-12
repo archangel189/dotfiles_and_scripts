@@ -108,10 +108,13 @@ alias gh-billmonger='cd $HOME/src/github.com/arimbun/billmonger'
 
 # --- Aliases ---
 
+alias gbdm='git branch --merged | grep -v \* | xargs git branch -d'
+alias gcdf='git clean -d -f'
 alias glst='git log --stat'
 alias gpoh='git push origin HEAD'
 alias gpohf='git push origin HEAD -f'
-alias gbdm='git branch --merged | grep -v \* | xargs git branch -d'
+alias gpot='git push origin --tag'
+alias gtl='git tag -l'
 
 alias ll='ls -la'
 alias vzshrc='vim ~/.zshrc'
