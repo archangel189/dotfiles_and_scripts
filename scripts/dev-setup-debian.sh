@@ -13,7 +13,7 @@ curl -sLf https://spacevim.org/install.sh | bash
 cp .* $HOME
 
 # APT packages
-apt-get install gnupg2 vim wget zsh zsh-syntax-highlighting
+apt-get install gnupg2 nginx vim wget zsh zsh-syntax-highlighting
 
 # Go packages
 go get -u github.com/nsf/gocode                 # completion
