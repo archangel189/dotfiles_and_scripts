@@ -80,6 +80,9 @@ ffmpeg -i infile.mp4 -i infile.srt -c copy -c:s mov_text outfile.mp4
 # Convert FLAC to mp3 256kbps
 ffmpeg -i input.flac -ab 256k -map_metadata 0 -id3v2_version 3 output.mp3
 
+# Convert MKV to AVI
+ffmpeg -i filename.mkv -c:v copy -c:a copy output.avi
+
 git diff master...feature/branch
 git log -p
 git log --graph --oneline --decorate
