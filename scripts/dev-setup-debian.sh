@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# APT packages
+apt-get update
+apt-get install -y gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting
+
 # Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -11,9 +15,6 @@ curl -sLf https://spacevim.org/install.sh | bash
 
 # Install dotfiles
 cp .* $HOME
-
-# APT packages
-apt-get install -y gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting
 
 # Go packages
 go get -u github.com/nsf/gocode                 # completion
