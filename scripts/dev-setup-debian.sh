@@ -9,7 +9,7 @@ apt-get update
 apt-get install -y curl gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting
 
 # Go programming language
-mkdir $USER_PATH/go
+mkdir -p $USER_PATH/go
 wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
 tar -xvf go1.13.3.linux-amd64.tar.gz
 sudo mv go /usr/local
