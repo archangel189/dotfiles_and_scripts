@@ -2,9 +2,20 @@
 
 set -euo pipefail
 
+USER_PATH=/home/arimbun
+
 # APT packages
 apt-get update
-apt-get install -y curl gcc gnupg2 go make nginx vim wget zsh zsh-syntax-highlighting
+apt-get install -y curl gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting
+
+# Go programming language
+mkdir /home/$USER/go
+wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
+tar -xvf go1.13.3.linux-amd64.tar.gz
+sudo mv go /usr/local
+export GOROOT=/usr/local/go
+export GOPATH=$USER_PATH/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
