@@ -1,8 +1,10 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # APT packages
 apt-get update
-apt-get install -y gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting
+apt-get install -y curl gcc gnupg2 go make nginx vim wget zsh zsh-syntax-highlighting
 
 # Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
