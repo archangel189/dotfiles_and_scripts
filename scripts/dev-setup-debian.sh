@@ -5,7 +5,7 @@ set -euo pipefail
 USER_PATH=/home/arimbun
 
 # APT packages
-sudo apt-get update && sudo apt-get install -y curl gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting software-properties-common
+sudo apt-get update && sudo apt-get install -y apt-transport-https curl debian-keyring gcc gnupg2 make nginx vim wget zsh zsh-syntax-highlighting software-properties-common
 
 # Go programming language
 mkdir -p $USER_PATH/go
